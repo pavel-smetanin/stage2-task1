@@ -17,8 +17,7 @@ namespace stage2_task1
         {
             get
             {
-                logger.Info($"Received lang-localization: {lang}");
-                lang = ConfigurationManager.AppSettings.Get("lang");
+                lang = "--lang=ru";//ConfigurationManager.AppSettings.Get("lang");
                 return lang;
             }
         }
@@ -34,9 +33,10 @@ namespace stage2_task1
             options.AddArgument(Lang);
             return new FirefoxDriver(options);
         }
-        public static IWebDriver InitDriver(string name)
+        public static IWebDriver InitDriver()
         {
-            switch(name)
+            string name = "chrome";//ConfigurationManager.AppSettings.Get("browser");
+            switch (name)
             {
                 case "chrome":
                     logger.Info("Selected Chrome Browser");

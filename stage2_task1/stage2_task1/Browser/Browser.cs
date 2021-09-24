@@ -7,7 +7,7 @@ using OpenQA.Selenium.Firefox;
 using System.Configuration;
 using NLog;
 
-namespace task3
+namespace stage2_task1
 {
     public static class Browser
     {

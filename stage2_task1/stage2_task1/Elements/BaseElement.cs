@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using NLog;
 
 
-namespace task3
+namespace stage2_task1
 {
     public abstract class BaseElement
     {

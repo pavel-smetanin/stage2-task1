@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium;
 
-namespace task3
+namespace stage2_task1
 {
     public class Paragraph : BaseElement
     {

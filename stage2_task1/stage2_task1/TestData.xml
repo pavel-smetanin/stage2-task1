@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <TestCase1>
+    <login>admin</login>
+    <password>admin</password>
+  </TestCase1>
+  <TestCase2>
+    <str>string</str>
+  </TestCase2>
+</root>

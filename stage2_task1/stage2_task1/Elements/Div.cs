@@ -5,11 +5,9 @@ using OpenQA.Selenium;
 
 namespace stage2_task1
 {
-    public class Button : BaseElement
+    public class Div : BaseElement
     {
-        public Button(By locator, string name) :
-            base(locator, name)
+        public Div(By locator, string name):base(locator, name)
         { }
-
     }
 }

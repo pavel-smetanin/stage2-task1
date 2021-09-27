@@ -23,10 +23,12 @@
     <Folder Include="Browser\" />
     <Folder Include="Forms\" />
     <Folder Include="Waits\" />
-    <Folder Include="RandomGenerators\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="TestData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="testhost.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

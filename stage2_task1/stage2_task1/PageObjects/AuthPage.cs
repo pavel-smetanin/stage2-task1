@@ -15,10 +15,10 @@ namespace stage2_task1
         TimerForm timerForm = new TimerForm();
         public AuthPage() : base("GameAuthPage", new Div(By.XPath("//div[@class='logo__icon']"), "Logo"))
         { }
-        public void StepCard1(string password, string email, string domain, string extDomain)
+        public void StepCard1(string password, string email, string domain, int indexDomain)
         {
             authCard.WaitForOpen();
-            authCard.EmailAndPasswordAuth(password, email, domain, extDomain);
+            authCard.EmailAndPasswordAuth(password, email, domain, indexDomain);
         }
         public void StepCard2(int num1, int num2, int num3)
         {

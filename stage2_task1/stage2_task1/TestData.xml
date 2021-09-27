@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <root>
-  <TestCase1>
-    <login>admin</login>
-    <password>admin</password>
-  </TestCase1>
-  <TestCase2>
-    <str>string</str>
-  </TestCase2>
+  <Card1>
+    <email>qwedsa</email>
+    <domain>mail</domain>
+    <indexDomain>2</indexDomain>
+    <password>123qwErкаr</password>
+   </Card1>
+  <Card2>
+    <interest1>0</interest1>
+    <interest2>1</interest2>
+    <interest3>2</interest3>
+  </Card2>
 </root>

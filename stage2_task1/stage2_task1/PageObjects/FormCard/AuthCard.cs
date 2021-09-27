@@ -15,7 +15,7 @@ namespace stage2_task1
         private ElementsList extDomains = new ElementsList(By.CssSelector(".dropdown__header"), By.CssSelector(".dropdown__list-item"), "ExtensionDomain");
         public AuthCard() : base("AuthCard", new Div(By.XPath("//div[@class='login-form__container']"), "LoginForm"))
         { }
-        public void EmailAndPasswordAuth(string password, string email, string domain, string extDomain)
+        public void EmailAndPasswordAuth(string password, string email, string domain, int indexDomain)
         {
             this.password.Clear();
             this.password.Click();
@@ -28,7 +28,7 @@ namespace stage2_task1
             this.domain.SendText(domain);
             acceptTerms.Click();
             extDomains.Click();
-            extDomains[1].Click();
+            extDomains[indexDomain].Click();
             nextBut.Click();
         }
     }

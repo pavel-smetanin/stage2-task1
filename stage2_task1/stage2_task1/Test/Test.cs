@@ -10,6 +10,11 @@ namespace stage2_task1
         [Test]
         public void TestCase1()
         {
+            int num1, num2, num3;
+            string password, email, domain;
+            int indexDomain;
+            TestData.TestDataCard1(out password, out email, out domain, out indexDomain);
+            TestData.TestDataCard2(out num1, out num2, out num3);
             //Открытие Welcome (Main) Page
             driver.Navigate().GoToUrl(url);
             mainPage.WaitForOpen();
@@ -19,7 +24,7 @@ namespace stage2_task1
             AuthPage authPage = new AuthPage();
             authPage.WaitForOpen();
             Assert.IsTrue(authPage.IsDisplayedCard1(), "Card 1 with authorization is displayed");
-            authPage.StepCard1("123qwErкаr", "qwedsa", "mail", ".org");
+            authPage.StepCard1(password, email, domain, indexDomain);
             //Открытие Card 2
             Assert.IsTrue(authPage.IsDisplayedCard2(), "Card 2 with interests and avatar is displayed");
             authPage.StepCard2(0, 1, 2);

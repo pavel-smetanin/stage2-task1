@@ -10,14 +10,19 @@ namespace stage2_task1
         AuthCard authCard = new AuthCard();
         InterestsAndAvatarCard interestsAndAvatarCard = new InterestsAndAvatarCard();
         PersonalCard personalCard = new PersonalCard();
+        HelpForm helpForm = new HelpForm();
+        CookiesForm cookiesForm = new CookiesForm();
+        TimerForm timerForm = new TimerForm();
         public AuthPage() : base("GameAuthPage", new Div(By.XPath("//div[@class='logo__icon']"), "Logo"))
         { }
-        public void Step1(string password, string email, string domain, string extDomain)
+        public void StepCard1(string password, string email, string domain, string extDomain)
         {
+            authCard.WaitForOpen();
             authCard.EmailAndPasswordAuth(password, email, domain, extDomain);
         }
-        public void Step2(int num1, int num2, int num3)
+        public void StepCard2(int num1, int num2, int num3)
         {
+            interestsAndAvatarCard.WaitForOpen();
             interestsAndAvatarCard.ChoseInterestsAndImage(num1, num2, num3);
         }
         public bool IsDisplayedCard1()
@@ -30,7 +35,36 @@ namespace stage2_task1
         }
         public bool IsDisplayedCard3()
         {
+            personalCard.WaitForOpen();
             return personalCard.IsDisplayed();
+        }
+        
+        public void StepCard4()
+        {
+            helpForm.WaitForOpen();
+            helpForm.RemoveHelpForm();
+        }
+        public bool IsDisplayedCard4()
+        {
+            return helpForm.IsDisplayed();
+        }
+
+        public void StepCard5()
+        {
+            cookiesForm.WaitForOpen();
+            cookiesForm.CookiesAccept();
+        }
+        public bool IsDisplayedCard5()
+        {
+            return cookiesForm.IsDisplayed();
+        }
+
+        public bool TimerIsZero()
+        {
+            string time = timerForm.TimeText;
+            if (time == "00:00:00")
+                return true;
+            return false;
         }
     }
 }

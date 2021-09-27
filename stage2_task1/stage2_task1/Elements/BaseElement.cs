@@ -16,6 +16,15 @@ namespace stage2_task1
         {
             get => locator;
         }
+        public string Text
+        {
+            get
+            {
+                if (FindElement().Text == null)
+                    throw new Exception("The element has not the text");
+                return FindElement().Text;
+            }
+        }
         public BaseElement(By locator, string name)
         {
             logger.Info($"Create element with name {name}");
@@ -39,8 +48,13 @@ namespace stage2_task1
         }
         public bool IsDisplayed()
         {
-            IWebElement webElement = FindElement();
-            return webElement.Displayed;
+            if (BrowserFactory.GetDriver().FindElements(Locator).Count > 0)
+                return true;
+            return false;
+        }
+        public bool IsEnabled()
+        {
+            return FindElement().Enabled;
         }
     }
 }

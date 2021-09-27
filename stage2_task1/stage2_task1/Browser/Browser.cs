@@ -17,7 +17,7 @@ namespace stage2_task1
         {
             get
             {
-                lang = "--lang=ru";//ConfigurationManager.AppSettings.Get("lang");
+                lang = ConfigurationManager.AppSettings.Get("lang");
                 return lang;
             }
         }
@@ -35,7 +35,7 @@ namespace stage2_task1
         }
         public static IWebDriver InitDriver()
         {
-            string name = "chrome";//ConfigurationManager.AppSettings.Get("browser");
+            string name = ConfigurationManager.AppSettings.Get("browser");
             switch (name)
             {
                 case "chrome":

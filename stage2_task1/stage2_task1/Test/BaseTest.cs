@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Configuration;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -10,7 +11,7 @@ namespace stage2_task1
     {
         protected IWebDriver driver;
         protected MainPage mainPage;
-        protected string url = "https://userinyerface.com/game.html%20target=";
+        protected string url = ConfigurationManager.AppSettings.Get("url");
         [SetUp]
         protected void SetUp()
         {
@@ -21,7 +22,7 @@ namespace stage2_task1
         [TearDown]
         protected void TearDown()
         {
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }

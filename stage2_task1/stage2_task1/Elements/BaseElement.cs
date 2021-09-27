@@ -33,6 +33,10 @@ namespace stage2_task1
             logger.Info($"Click on web element {name}");
             FindElement().Click();
         }
+        public void Clear()
+        {
+            FindElement().Clear();
+        }
         public bool IsDisplayed()
         {
             IWebElement webElement = FindElement();

@@ -22,6 +22,7 @@
     <Folder Include="Browser\" />
     <Folder Include="Forms\" />
     <Folder Include="Waits\" />
+    <Folder Include="RandomGenerators\" />
   </ItemGroup>
 
   <ItemGroup>

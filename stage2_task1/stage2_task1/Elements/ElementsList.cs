@@ -8,10 +8,10 @@ namespace stage2_task1
 {
     public class ElementsList : BaseElement
     {
-        List<IWebElement> elements;
+        IReadOnlyList<IWebElement> elements;
         public ElementsList(By uniqLocator, By listLocator, string name) : base(uniqLocator, name)
         {
-            elements = BrowserFactory.GetDriver().FindElements(listLocator).ToList();
+            elements = BrowserFactory.GetDriver().FindElements(listLocator);
         }
         public int CountElements
         {
@@ -39,4 +39,4 @@ namespace stage2_task1
         }
     }
 }
-}
+

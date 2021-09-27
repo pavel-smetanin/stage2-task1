@@ -21,7 +21,7 @@ namespace stage2_task1
         [TearDown]
         protected void TearDown()
         {
-            driver.Quit();
+            //driver.Quit();
         }
     }
 }

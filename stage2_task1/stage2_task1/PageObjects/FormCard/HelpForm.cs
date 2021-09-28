@@ -12,11 +12,8 @@ namespace stage2_task1
         { }
         public void RemoveHelpForm()
         {
+            logger.Info("Click on button for remove Help form");
             SendBut.Click();
-        }
-        public bool IsHidden()
-        {
-            return unElement.IsEnabled();
         }
     }
 }

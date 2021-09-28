@@ -23,6 +23,7 @@ namespace stage2_task1
             {
                 if (elements[index] == null)
                 {
+                    logger.Error("The index is out of the Web Elements List " + name);
                     throw new IndexOutOfRangeException("The index is out of the Web Elements List");
                 }
                 return elements[index];
@@ -35,7 +36,8 @@ namespace stage2_task1
                 if (elements[i].Text == text)
                     return elements[i];
             }
-            throw new Exception($"Element with text: {text} is not found");
+            logger.Error("Element with text: {text} is not found " + name);
+            throw new Exception($"Element with text: {text} is not found ");
         }
     }
 }

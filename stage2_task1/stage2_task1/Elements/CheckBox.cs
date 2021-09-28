@@ -9,9 +9,5 @@ namespace stage2_task1
     {
         public CheckBox(By locator, string name) : base(locator, name)
         { }
-        public void Do()
-        {
-           // FindElement().
-        }
     }
 }

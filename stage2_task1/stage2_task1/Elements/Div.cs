@@ -9,9 +9,5 @@ namespace stage2_task1
     {
         public Div(By locator, string name):base(locator, name)
         { }
-        public void SendKeys(string file)
-        {
-            FindElement().SendKeys(file);
-        }
     }
 }

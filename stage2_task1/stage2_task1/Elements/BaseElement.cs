@@ -21,7 +21,10 @@ namespace stage2_task1
             get
             {
                 if (FindElement().Text == null)
+                {
+                    logger.Info($"The element {name} has not a text");
                     throw new Exception("The element has not the text");
+                }
                 return FindElement().Text;
             }
         }
@@ -50,11 +53,8 @@ namespace stage2_task1
         {
             if (BrowserFactory.GetDriver().FindElements(Locator).Count > 0)
                 return true;
+            logger.Warn($"The element {name} is not displayed");
             return false;
-        }
-        public bool IsEnabled()
-        {
-            return FindElement().Enabled;
         }
     }
 }

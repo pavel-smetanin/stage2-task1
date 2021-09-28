@@ -24,6 +24,7 @@ namespace stage2_task1
         {
             interestsAndAvatarCard.WaitForOpen();
             interestsAndAvatarCard.ChoseInterestsAndImage(num1, num2, num3);
+            personalCard.WaitForOpen();
         }
         public bool IsDisplayedCard1()
         {
@@ -35,7 +36,7 @@ namespace stage2_task1
         }
         public bool IsDisplayedCard3()
         {
-            personalCard.WaitForOpen();
+            
             return personalCard.IsDisplayed();
         }
         
@@ -64,6 +65,7 @@ namespace stage2_task1
             string time = timerForm.TimeText;
             if (time == "00:00:00")
                 return true;
+            logger.Warn("Value of timer is not zero: " + time);
             return false;
         }
     }

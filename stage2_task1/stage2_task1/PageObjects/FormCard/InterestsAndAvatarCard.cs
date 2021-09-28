@@ -18,6 +18,7 @@ namespace stage2_task1
         { }
         public void ChoseInterestsAndImage(int num1, int num2, int num3)
         {
+            logger.Info("Choose interests and avatar image");
             string fileName = ConfigurationManager.AppSettings.Get("avatarFile");
             int timeSleep = int.Parse(ConfigurationManager.AppSettings.Get("timeSleep"));
             checkBoxList = new ElementsList(By.CssSelector(".avatar-and-interests__interests-list"),
@@ -29,6 +30,7 @@ namespace stage2_task1
             interests[num2].Click();
             interests[num3].Click();
             uploadImg.Click();
+            logger.Info("Create a window");
             InputSimulator input = new InputSimulator();
             input.Keyboard.Sleep(timeSleep).TextEntry(fileName).KeyPress(VirtualKeyCode.RETURN);
             nextBut.Click();

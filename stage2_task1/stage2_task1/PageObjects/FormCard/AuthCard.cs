@@ -17,6 +17,7 @@ namespace stage2_task1
         { }
         public void EmailAndPasswordAuth(string password, string email, string domain, int indexDomain)
         {
+            logger.Info("Input password, email and domain");
             this.password.Clear();
             this.password.Click();
             this.password.SendText(password);

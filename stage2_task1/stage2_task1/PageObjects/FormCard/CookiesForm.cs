@@ -12,6 +12,7 @@ namespace stage2_task1
         { }
         public void CookiesAccept()
         {
+            logger.Info("Click on cookies");
             butAccept.Click();
         }
     }
